@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Codificador</title>
+</head>
+<body>
+    <header class="container_cabecalho">
+        <div class="logo_alura">
+            <img src="/assets/Vector.png" alt="Logo Alura">
+        </div>
+    </header>
+    <main>
+        <div class="container_principal">
+            <section class="entrada_dados">
+                <textarea name="text" class="campo_entrada_dados" rows="6" id="campoEntradaDados" placeholder="Digite seu texto aqui!" id="campo_digitar_texto"></textarea>
+                <div class="container_entrada_dados">
+                    <div class="aviso">
+                        <img src="/assets/imagem-circulo.png" alt="Circulo error">
+                        <p class="mensagem_aviso">Apenas letras minúsculas e sem acento.</p>
+                    </div>
+                    <div class="botoes_entrada_dados">
+                        <button class="codificar" id="botao_criptografar">Criptografar</button>
+                        <button class="descodificar" id="botao_descriptografar">Descriptografar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="saida_dados">
+                <section class="saida_dados_container">
+                    <p class="texto_codificado" id="saidaDados"></p>
+                    <img src="/assets/Image.png" alt="" id="imagemNoText" class="imagemNoText">
+                    <div class="info_saida_dados" id="infoSaidaDados">
+                        <h1 class="nenhuma_mensagem">Nenhuma mensagem encontrada</h1>
+                        <p class="digite_um_texto">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                    </div>
+                </section>
+                <div class="botao_container">
+                    <button class="botao_copiar" id="botaoCopiar">Copiar</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="container_rodape">
+        <div class="texto_rodape">
+            <p class="copyright">Todos os direitos reservados &copy; André Santos!</p>
+        </div>
+    </footer>
+    <script src="./js/app.js"></script>
+</body>
+</html>

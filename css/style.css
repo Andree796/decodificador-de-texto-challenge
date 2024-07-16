@@ -1,0 +1,357 @@
+*{
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+}
+
+body{
+  font-family: "Inter", sans-serif;
+  background-color: light-blue;
+}
+
+.logo_alura{
+  margin: 2.5rem 0 1rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7.5rem;
+  height: 3rem;
+}
+
+.container_cabecalho{
+  margin-bottom: 80px;
+}
+
+.container_principal{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 45px;
+}
+
+.entrada_dados{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
+.container_entrada_dados{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.aviso{
+  display: flex;
+  gap: 8px;
+}
+
+.mensagem_aviso{
+  color: gray;
+  font-size: 0.75rem;
+}
+
+.campo_entrada_dados{
+  width: 100%;
+  font-size: 32px;
+  height: auto;
+  resize: none;
+  border: none;
+  outline: none;
+  color: #0A3871;
+
+}
+
+.campo_entrada_dados::placeholder{
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #0A3871;
+
+}
+
+.botoes_entrada_dados{
+  display: flex;
+  justify-content: space-between;
+  width: 42.7rem;
+  height: 4.18rem;
+
+}
+
+.codificar{
+  width: 328px;
+  height: 67px;
+  background-color: #0A3871;
+  font-family: "Inter", sans-serif;
+  border: none;
+  border-radius: 24px;
+  color: white;
+  font-size: 16px;
+}
+
+.descodificar{
+  width: 328px;
+  height: 67px;
+  font-family: "Inter", sans-serif;
+  border: none;
+  border-radius: 24px;
+  font-size: 16px;
+  background-color: white;
+  border: #0A3871 solid;
+  color: #0A3871;
+}
+
+.saida_dados{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: .5px .5px 10px rgba(0, 0, 0, .1);
+  width: 25rem;
+  height: 59rem;
+  border-radius: 32px;
+  background-color: white;
+  position: relative;
+  gap: 32px;
+}
+
+.saida_dados_container{
+  overflow: hidden;
+  gap: 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 336px;
+  height: 791px;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.texto_codificado_on{
+  overflow: auto;
+  width: 336px;
+  height: 791px;
+  text-align: left;
+  word-break: break-word;
+  font-size: 24px;
+  font-weight: 400;
+  color: gray;
+}
+
+.texto_codificado{
+  display: none;
+}
+
+.nenhuma_mensagem{
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+}
+
+.nenhuma_mensagem_off{
+  display: none;
+}
+
+.digite_um_texto{
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: gray;
+}
+
+.digite_um_texto_off{
+  display: none;
+}
+
+.botao_copiar_on{
+  width: 336px;
+  border-radius: 24px;
+  background-color: white;
+  border: darkblue solid;
+  height: 67px;
+  color: darkblue;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  position: relative;
+}
+
+.botao_copiar{
+  display: none;
+}
+
+.info_saida_dados{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info_saida_dados_off{
+  display: none;
+}
+
+.imagemNoText_off{
+  display: none;
+}
+
+.container_rodape{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+}
+.texto_rodape{
+  background-color: #0A3871;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 4rem;
+}
+            
+.botao_container{
+  display: none;
+}
+
+.botao_container_on{
+  display: flex;
+}
+
+@media (max-width: 1500px){
+
+  body{
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .container_principal{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .entrada_dados{
+    width: auto;
+    display: flex;
+  }
+
+  .campo_entrada_dados{
+    width: 43rem;
+    margin-bottom: 2rem;
+  }
+
+  .saida_dados{
+    width: 688px;
+    height: 14.30rem;
+    gap: 1rem;
+    padding: 30px;
+    justify-content: space-evenly;
+  }
+
+  .texto_codificado_on{
+    overflow: auto;
+    width: 624px;
+    height: auto;
+  
+  }
+  .saida_dados_container{
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .imagemNoText{
+    display: none;
+  }
+
+  .container_rodape{
+    margin: 0;
+  }
+
+}
+
+@media (max-width: 650px){
+
+  main{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .container_principal{
+    gap: 45px;
+  }
+  .container_cabecalho{
+    margin: 0;
+    padding: 45px
+  }
+
+  .logo_alura{
+    margin: 0;
+    justify-content: flex-start;
+  }
+
+  .entrada_dados{
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .container_entrada_dados{
+    width: 100%;
+  }
+
+  .botoes_entrada_dados{
+    height: auto;
+    gap: 24px;
+    flex-direction: column;
+    width: auto;
+  }
+
+  .campo_entrada_dados{
+    width: 100%;
+  }
+
+  .codificar{
+    width: auto;
+  }
+  .descodificar{
+    width: auto;
+  }
+
+  .saida_dados{
+    width: 100%;
+    height: 186px;
+    gap: 10px;
+    background-color: white;
+    justify-content: space-evenly;
+    box-shadow: .5px .5px 10px rgba(0, 0, 0, .1);
+  }
+
+  .saida_dados_container{
+    width: 263px;
+    height: auto;
+  }
+
+  .info_saida_dados{
+    width: 267px;
+    
+  }
+
+  .texto_codificado_on{
+    width: auto;
+  }
+
+  .botao_container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .botao_container_on{
+    width: 80%;
+  }
+
+  .botao_copiar_on{
+    width: 100%;
+  }
+
+}
