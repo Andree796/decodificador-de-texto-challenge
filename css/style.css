@@ -1,357 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
 *{
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+  --cor-primaria: white;
+  --cor-secundaria: #0A3871;
+  --cor-terciaria: #495057;
+  --cor-quartenaria: #D8DFE8;
+  --fonte-principal: "Inter", sans-serif;
 }
 
-body{
-  font-family: "Inter", sans-serif;
-  background-color: light-blue;
+.container-principal{
+  display: grid;
+  grid-template-columns: 40px auto 80px 1fr 80px 1fr 40px;
+  grid-template-rows: 40px auto 80px 1fr 72px;
+  grid-template-areas: 
+  ". . . . . . ."
+  ". foto . . . principal2 ."
+  ". foto . . . principal2 ."
+  ". foto . principal . principal2 ."
+  "rodape rodape rodape rodape rodape rodape rodape";
 }
 
-.logo_alura{
-  margin: 2.5rem 0 1rem 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 7.5rem;
-  height: 3rem;
+.grid-container-header{
+  grid-area: foto;
 }
 
-.container_cabecalho{
-  margin-bottom: 80px;
-}
-
-.container_principal{
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
+.grid-container-esquerda-main{
   gap: 45px;
-}
-
-.entrada_dados{
+  height: auto;
   display: flex;
   flex-direction: column;
+  grid-area: principal;
+}
+
+.grid-container-esquerda-main textarea{
+  padding: 15px;
+  height: 100%;
+  font-size: 24px;
+  width: auto;
+  overflow: auto;
+  resize: none;
+  outline: none;
+  border: none;
+  color: var(--cor-secundaria);
+  font-family: var(--fonte-principal);
+
+}
+
+.grid-container-esquerda-main textarea::placeholder{
+  color: var(--cor-secundaria);
+  font-size: 24px;
+}
+
+.container-botoes{
+  display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 50%;
+  flex-direction: column;
+  gap: 24px;
+  height: auto;
 }
 
-.container_entrada_dados{
+.container-botoes-aviso{
   display: flex;
-  flex-direction: column;
+  font-family: var(--fonte-principal);
+  color: var(--cor-terciaria);
+  font-size: 12px;
+  align-items: center;
   gap: 16px;
 }
 
-.aviso{
+.container-botoes-botoes{
   display: flex;
-  gap: 8px;
-}
-
-.mensagem_aviso{
-  color: gray;
-  font-size: 0.75rem;
-}
-
-.campo_entrada_dados{
-  width: 100%;
-  font-size: 32px;
-  height: auto;
-  resize: none;
-  border: none;
-  outline: none;
-  color: #0A3871;
-
-}
-
-.campo_entrada_dados::placeholder{
-  font-family: "Inter", sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
-  color: #0A3871;
-
-}
-
-.botoes_entrada_dados{
-  display: flex;
+  gap: 15px;
   justify-content: space-between;
-  width: 42.7rem;
-  height: 4.18rem;
-
 }
 
-.codificar{
+.container-botoes button{
+  padding: 24px;
   width: 328px;
-  height: 67px;
-  background-color: #0A3871;
-  font-family: "Inter", sans-serif;
+  border-radius: 32px;
   border: none;
-  border-radius: 24px;
-  color: white;
+}
+.botao-criptografar{
+  background-color: var(--cor-secundaria);
+  border: none;
+  color: var(--cor-primaria);
+  font-family: var(--fonte-principal);
   font-size: 16px;
 }
 
-.descodificar{
-  width: 328px;
-  height: 67px;
-  font-family: "Inter", sans-serif;
+.botao-descriptografar{
+  background-color: var(--cor-quartenaria);
   border: none;
-  border-radius: 24px;
+  color: var(--cor-secundaria);
+  font-family: var(--fonte-principal);
+  border: 2px solid var(--cor-secundaria) !important;
   font-size: 16px;
-  background-color: white;
-  border: #0A3871 solid;
-  color: #0A3871;
 }
 
-.saida_dados{
+.botao-copiar{
+  background-color: var(--cor-primaria);
+  border: none;
+  color: var(--cor-secundaria);
+  font-family: var(--fonte-principal);
+  border: 2px solid var(--cor-secundaria) !important;
+  font-size: 16px;
+}
+
+.grid-container-direita-main{
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: .5px .5px 10px rgba(0, 0, 0, .1);
-  width: 25rem;
-  height: 59rem;
+  box-shadow: 0.5px 0.5px 10px rgba(0, 0, 0, 0.2);
+  grid-template-columns: 32px auto 32px;
+  grid-template-rows:  32px 243px auto 32px auto 243px 67px 32px;
+  grid-template-areas: 
+  ". . ."
+  ". item ."
+  ". item ."
+  ". item."
+  ". item ."
+  ". item ."
+  ". botao ."
+  ;
+  display: grid;
+  grid-area: principal2;
+  height: 100%;
   border-radius: 32px;
   background-color: white;
-  position: relative;
-  gap: 32px;
-}
-
-.saida_dados_container{
-  overflow: hidden;
-  gap: 32px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  width: 336px;
-  height: 791px;
-  text-align: center;
-  justify-content: center;
-
-}
-
-.texto_codificado_on{
-  overflow: auto;
-  width: 336px;
-  height: 791px;
-  text-align: left;
   word-break: break-word;
+  overflow: auto;
+  row-gap: 15px;
+}
+
+.grid-container-interno{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: item;
+}
+
+.box-texto{
+  display: none;
+}
+
+.box-texto-ativo{
+  font-family: var(--fonte-principal);
   font-size: 24px;
-  font-weight: 400;
-  color: gray;
+  grid-area: resultado;
+  word-break: break-word;
+  color: var(--cor-terciaria);
+  overflow: hidden;
+
 }
 
-.texto_codificado{
-  display: none;
+.container-saida-dados{
+  text-align: center;
+  grid-area: item;
+  width: auto;
 }
 
-.nenhuma_mensagem{
-  font-weight: 700;
-  font-family: "Inter", sans-serif;
-  font-size: 24px;
-}
-
-.nenhuma_mensagem_off{
-  display: none;
-}
-
-.digite_um_texto{
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  color: gray;
-}
-
-.digite_um_texto_off{
-  display: none;
-}
-
-.botao_copiar_on{
-  width: 336px;
-  border-radius: 24px;
-  background-color: white;
-  border: darkblue solid;
-  height: 67px;
-  color: darkblue;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  position: relative;
-}
-
-.botao_copiar{
-  display: none;
-}
-
-.info_saida_dados{
+.itens{
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
+  width: 65%;
 }
 
-.info_saida_dados_off{
+.imagem-off{
   display: none;
 }
 
-.imagemNoText_off{
+.container-informacoes-ativo{
   display: none;
 }
 
-.container_rodape{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 4rem;
-}
-.texto_rodape{
-  background-color: #0A3871;
-  width: 100%;
+.container-informacoes{
   text-align: center;
-  color: white;
-  padding: 4rem;
+  width: auto;
+  margin: 0 auto;
+  grid-area: texto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-            
-.botao_container{
+.container-informacoes h1{
+  font-family: var(--fonte-principal);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.container-informacoes p{
+  font-family: var(--fonte-principal);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.container-botao-copiar-dados{
+  /* grid-area: botao; */
   display: none;
 }
 
-.botao_container_on{
-  display: flex;
+.container-botao-copiar-dados-ativado{
+  grid-area: botao;
 }
 
-@media (max-width: 1500px){
-
-  body{
-    display: flex;
-    flex-direction: column;
-    gap: 45px;
-  }
-
-  .container_principal{
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .entrada_dados{
-    width: auto;
-    display: flex;
-  }
-
-  .campo_entrada_dados{
-    width: 43rem;
-    margin-bottom: 2rem;
-  }
-
-  .saida_dados{
-    width: 688px;
-    height: 14.30rem;
-    gap: 1rem;
-    padding: 30px;
-    justify-content: space-evenly;
-  }
-
-  .texto_codificado_on{
-    overflow: auto;
-    width: 624px;
-    height: auto;
-  
-  }
-  .saida_dados_container{
-    align-items: center;
-    width: 100%;
-    height: auto;
-  }
-
-  .imagemNoText{
-    display: none;
-  }
-
-  .container_rodape{
-    margin: 0;
-  }
-
-}
-
-@media (max-width: 650px){
-
-  main{
-    display: flex;
-    flex-direction: column;
-    height: auto;
-  }
-
-  .container_principal{
-    gap: 45px;
-  }
-  .container_cabecalho{
-    margin: 0;
-    padding: 45px
-  }
-
-  .logo_alura{
-    margin: 0;
-    justify-content: flex-start;
-  }
-
-  .entrada_dados{
-    width: 100%;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  .container_entrada_dados{
-    width: 100%;
-  }
-
-  .botoes_entrada_dados{
-    height: auto;
-    gap: 24px;
-    flex-direction: column;
-    width: auto;
-  }
-
-  .campo_entrada_dados{
-    width: 100%;
-  }
-
-  .codificar{
-    width: auto;
-  }
-  .descodificar{
-    width: auto;
-  }
-
-  .saida_dados{
-    width: 100%;
-    height: 186px;
-    gap: 10px;
-    background-color: white;
-    justify-content: space-evenly;
-    box-shadow: .5px .5px 10px rgba(0, 0, 0, .1);
-  }
-
-  .saida_dados_container{
-    width: 263px;
-    height: auto;
-  }
-
-  .info_saida_dados{
-    width: 267px;
-    
-  }
-
-  .texto_codificado_on{
-    width: auto;
-  }
-
-  .botao_container {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .botao_container_on{
-    width: 80%;
-  }
-
-  .botao_copiar_on{
-    width: 100%;
-  }
-
+.container-botao-copiar-dados-ativado button{
+  width: 100%;
+  height: 100%;
+  border-radius: 32px;
+  border: none;
 }

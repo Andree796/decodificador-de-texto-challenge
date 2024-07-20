@@ -1,0 +1,122 @@
+@media (max-width: 640px) {
+  .container-principal{
+    justify-content: center;
+    grid-template-columns: 30px auto 30px;
+    grid-template-rows: 40px auto 40px 2fr 40px 1fr 40px;
+    grid-template-areas: 
+    ". . ."
+    ". logo ."
+    ". . ."
+    ". esquerda ."
+    ". . ."
+    ". direita ."
+    ". . ."
+    ;
+  }
+
+  .grid-container-header{
+    grid-area: logo;
+  }
+
+  .grid-container-esquerda-main{
+    grid-area: esquerda;
+  }
+
+  .grid-container-esquerda-main textarea{
+    height: 500px;
+  }
+
+  .container-botoes-botoes{
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .grid-container-interno{
+    width: auto;
+    height: auto;
+    grid-area: texto;
+  }
+
+  .container-botao-copiar-dados{
+    grid-area: botao;
+    width: auto;
+    height: 60px;
+  }
+
+  .itens{
+    width: 100%;
+  }
+
+  .itens img{
+    display: none;
+  }
+
+  .grid-container-direita-main{
+    grid-area: direita;
+    grid-template-rows: 32px auto auto 32px;
+    grid-template-areas: 
+    ". . ."
+    ". item ."
+    ". botao ."
+    ". . .";
+  }
+
+  .box-texto{
+    grid-area: item;
+  }
+
+  .grid-container-interno{
+    grid-area: item;
+    width: auto;
+  }
+
+  .container-botoes button{
+    width: auto;
+  }
+
+  .container-botao-copiar-dados-ativado{
+    height: 4rem;
+  }
+
+}
+
+@media (max-width: 1500px){
+  .container-principal{
+    column-gap: 15px;
+    grid-template-columns: 32px 1fr 32px;
+    row-gap: 15px;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    ". . . "
+    ". logo ."
+    ". esquerda ."
+    ". . ."
+    ". direita ."
+    ". . ."
+    ". . ."
+    ;
+
+  }
+
+  .grid-container-header{
+    grid-area: logo;
+    margin-bottom: 32px;
+  }
+
+  .grid-container-esquerda-main{
+    grid-area: esquerda;
+    overflow: auto;
+  }
+
+  .grid-container-esquerda-main textarea{
+    height: 600px;
+  }
+
+  .grid-container-direita-main{
+    grid-area: direita;
+  }
+
+  .itens{
+    width: auto;
+  }
+}
